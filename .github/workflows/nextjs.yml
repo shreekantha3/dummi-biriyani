@@ -29,12 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Enable static export for GitHub Pages
-        run: |
-          sed -i 's|// output: "export",|output: "export",|' next.config.ts
-          sed -i 's|// images: { unoptimized: true },|images: { unoptimized: true },|' next.config.ts
-          sed -i 's|// trailingSlash: true,|trailingSlash: true,|' next.config.ts
-
       - name: Build
         run: npm run build
 
